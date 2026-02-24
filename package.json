@@ -1,5 +1,5 @@
 {
-  "name": "@NewYorkStyle/project-template-ui",
+  "name": "@new_york_style/project-template-ui",
   "version": "1.0.2",
   "description": "React UI Kit for Project Template",
   "license": "MIT",
@@ -53,7 +53,6 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "11.0.6",
-    "@semantic-release/npm": "12.0.2",
     "@storybook/addon-a11y": "10.2.12",
     "@storybook/addon-docs": "10.2.12",
     "@storybook/addon-webpack5-compiler-swc": "4.0.2",

@@ -12,13 +12,6 @@
 - `npm run semantic-release` — полноценный релиз (используется в CI).
 - `npm run semantic-release:dry-run` — прогон без записи изменений (для локальной проверки).
 
-### Переменные окружения для CI
-
-Для работы релизного пайплайна в GitHub Actions должны быть настроены секреты:
-
-- `GITHUB_TOKEN` — стандартный токен GitHub Actions (передаётся автоматически, достаточно пробросить его в шаг с `semantic-release`).
-- `NPM_TOKEN` **или** `NODE_AUTH_TOKEN` — токен доступа к GitHub Packages с правами на publish для пакета `@NewYorkStyle/project-template-ui`.
-
 ### Формат коммитов
 
 - Используется стандартный пресет `conventionalcommits`, примеры:
