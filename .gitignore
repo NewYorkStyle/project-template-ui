@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+storybook-static/
+
+.env
+.env.*
+
+*.tsbuildinfo
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*storybook.log
