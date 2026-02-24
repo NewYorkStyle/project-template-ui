@@ -33,8 +33,16 @@
   ],
   "sideEffects": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NewYorkStyle/project-template-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NewYorkStyle/project-template-ui/issues"
+  },
+  "homepage": "https://newyorkstyle.github.io/project-template-ui/",
   "peerDependencies": {
     "antd": "^6",
     "react": "^18 || ^19",
