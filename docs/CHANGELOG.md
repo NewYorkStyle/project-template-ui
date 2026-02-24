@@ -1,10 +1,3 @@
-## [1.0.3](https://github.com/NewYorkStyle/project-template-ui/compare/v1.0.2...v1.0.3) (2026-02-24)
-
-### Bug Fixes
-
-* PROJECTTEMPLATE-51 Test npm publish ([981d2a5](https://github.com/NewYorkStyle/project-template-ui/commit/981d2a5193a9f13a1638d83cdccbd4b6daaa91e1))
-* PROJECTTEMPLATE-51 Test npm publish ([ad46e3f](https://github.com/NewYorkStyle/project-template-ui/commit/ad46e3f538de72bc88d2c3e89bdd5f22d5a6e00a))
-
 ## [1.0.2](https://github.com/NewYorkStyle/project-template-ui/compare/v1.0.1...v1.0.2) (2026-02-24)
 
 ### Bug Fixes
