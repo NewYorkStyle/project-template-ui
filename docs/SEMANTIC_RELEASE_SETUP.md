@@ -17,7 +17,7 @@
 Для работы релизного пайплайна в GitHub Actions должны быть настроены секреты:
 
 - `GITHUB_TOKEN` — стандартный токен GitHub Actions (передаётся автоматически, достаточно пробросить его в шаг с `semantic-release`).
-- `NPM_TOKEN` **или** `NODE_AUTH_TOKEN` — токен доступа к GitHub Packages с правами на publish для пакета `@NewYorkStyle/project-template-ui`.
+- `SEMANTIC_RELEASE_BOT_NPM_TOKEN` — токен доступа к GitHub Packages с правами на publish для пакета `@new_york_style/project-template-ui`.
 
 ### Формат коммитов
 
