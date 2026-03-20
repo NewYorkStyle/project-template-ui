@@ -11,10 +11,10 @@ const {
   Title: AntdTitle,
 } = AntdTypography;
 
-type TParagraphProps = ParagraphProps;
-type TTextProps = TextProps;
-type TTitleProps = TitleProps;
-type TLinkProps = LinkProps;
+export type TParagraphProps = ParagraphProps;
+export type TTextProps = TextProps;
+export type TTitleProps = TitleProps;
+export type TLinkProps = LinkProps;
 
 const Paragraph = (props: TParagraphProps) => {
   return <AntdParagraph {...props} />;

@@ -1,7 +1,7 @@
 import {Button as AntdButton, type ButtonProps} from 'antd';
 
-type TProps = ButtonProps;
+export type TButtonProps = ButtonProps;
 
-export const Button = (props: TProps) => {
+export const Button = (props: TButtonProps) => {
   return <AntdButton {...props} />;
 };

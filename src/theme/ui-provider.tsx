@@ -2,49 +2,33 @@ import {type ReactNode, useMemo} from 'react';
 
 import {ConfigProvider} from 'antd';
 
-import {designTokens, type TDesignTokens} from './design-tokens';
+import {designTokens, type TColorsPalette} from './design-tokens';
 import {getAntdThemeConfig} from './get-antd-tokens';
 
 export type TUiProviderProps = {
   children: ReactNode;
-  tokens?: Partial<TDesignTokens>;
+  tokens?: Partial<TColorsPalette>;
 };
 
-const mergeTokens = (overrides?: Partial<TDesignTokens>): TDesignTokens => {
+const mergeColorsPalette = (
+  overrides?: Partial<TColorsPalette>
+): TColorsPalette => {
   if (!overrides) {
     return designTokens;
   }
 
   return {
-    colors: {
-      ...designTokens.colors,
-      ...(overrides.colors ?? {}),
-    },
-    spacing: {
-      ...designTokens.spacing,
-      ...(overrides.spacing ?? {}),
-    },
-    borderRadius: {
-      ...designTokens.borderRadius,
-      ...(overrides.borderRadius ?? {}),
-    },
-    textSize: {
-      ...designTokens.textSize,
-      ...(overrides.textSize ?? {}),
-    },
-    breakpoints: {
-      ...designTokens.breakpoints,
-      ...(overrides.breakpoints ?? {}),
-    },
+    ...designTokens,
+    ...overrides,
   };
 };
 
 export const UiProvider = ({children, tokens}: TUiProviderProps) => {
-  const mergedTokens = useMemo(() => mergeTokens(tokens), [tokens]);
+  const mergedPalette = useMemo(() => mergeColorsPalette(tokens), [tokens]);
 
   const antdTheme = useMemo(
-    () => getAntdThemeConfig(mergedTokens),
-    [mergedTokens]
+    () => getAntdThemeConfig(mergedPalette),
+    [mergedPalette]
   );
 
   return <ConfigProvider theme={antdTheme}>{children}</ConfigProvider>;

@@ -1,7 +1,7 @@
 import {Divider as AntdDivider, type DividerProps} from 'antd';
 
-type TProps = DividerProps;
+export type TDividerProps = DividerProps;
 
-export const Divider = (props: TProps) => {
+export const Divider = (props: TDividerProps) => {
   return <AntdDivider {...props} />;
 };

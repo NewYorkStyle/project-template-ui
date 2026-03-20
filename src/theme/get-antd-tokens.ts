@@ -1,12 +1,10 @@
 import type {ThemeConfig} from 'antd';
 
-import {designTokens, type TDesignTokens} from './design-tokens';
+import {designTokens, type TColorsPalette, layoutTokens} from './design-tokens';
 
 export const getAntdThemeConfig = (
-  tokens: TDesignTokens = designTokens
+  palette: TColorsPalette = designTokens
 ): ThemeConfig => {
-  const palette = tokens.colors;
-
   return {
     components: {
       Button: {
@@ -19,7 +17,7 @@ export const getAntdThemeConfig = (
       },
       Layout: {
         headerBg: palette.backgroundPrimary,
-        headerPadding: tokens.spacing.md,
+        headerPadding: layoutTokens.spacing.md,
         triggerBg: 'transparent',
       },
       Select: {
@@ -27,19 +25,19 @@ export const getAntdThemeConfig = (
         optionSelectedFontWeight: 'normal',
       },
       Typography: {
-        fontSize: tokens.textSize.md,
-        fontSizeHeading1: tokens.textSize.xl,
+        fontSize: layoutTokens.textSize.md,
+        fontSizeHeading1: layoutTokens.textSize.xl,
       },
     },
     token: {
-      borderRadius: tokens.borderRadius.md,
+      borderRadius: layoutTokens.borderRadius.md,
       colorBgBase: palette.backgroundPrimary,
       colorBgContainer: palette.backgroundSecondary,
       colorTextBase: palette.textPrimary,
       colorTextPlaceholder: palette.textSecondary,
       fontFamily:
         "'Franklin Gothic Medium', 'Arial Narrow',\n  Arial,\n  sans-serif;",
-      fontSize: tokens.textSize.md,
+      fontSize: layoutTokens.textSize.md,
     },
   };
 };

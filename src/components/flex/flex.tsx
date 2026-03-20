@@ -1,7 +1,7 @@
 import {Flex as AntdFlex, type FlexProps} from 'antd';
 
-type TProps = FlexProps;
+export type TFlexProps = FlexProps;
 
-export const Flex = (props: TProps) => {
+export const Flex = (props: TFlexProps) => {
   return <AntdFlex {...props} />;
 };

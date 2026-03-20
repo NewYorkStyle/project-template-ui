@@ -1,7 +1,7 @@
 import {Tabs as AntdTabs, type TabsProps} from 'antd';
 
-type TProps = TabsProps;
+export type TTabsProps = TabsProps;
 
-export const Tabs = (props: TProps) => {
+export const Tabs = (props: TTabsProps) => {
   return <AntdTabs {...props} />;
 };
