@@ -1,8 +1,8 @@
 import {type ReactNode, useMemo} from 'react';
 
 import {ConfigProvider} from 'antd';
-import en_US from 'antd/locale/en_US';
-import ru_RU from 'antd/locale/ru_RU';
+import en_US from 'antd/locale/en_US.js';
+import ru_RU from 'antd/locale/ru_RU.js';
 
 import {designTokens, type TColorsPalette} from './design-tokens';
 import {getAntdThemeConfig} from './get-antd-tokens';
