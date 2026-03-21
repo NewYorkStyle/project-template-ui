@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/NewYorkStyle/project-template-ui/compare/v1.2.0...v1.2.1) (2026-03-21)
+
+### Bug Fixes
+
+* PROJECTTEMPLATE-55 Исправление путей для локализации ([#7](https://github.com/NewYorkStyle/project-template-ui/issues/7)) ([6ea7667](https://github.com/NewYorkStyle/project-template-ui/commit/6ea76678c143a6190b3f212330e79222886c8663))
+
 ## [1.2.0](https://github.com/NewYorkStyle/project-template-ui/compare/v1.1.0...v1.2.0) (2026-03-21)
 
 ### Features
