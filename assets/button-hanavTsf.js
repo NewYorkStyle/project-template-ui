@@ -1,1 +1,0 @@
-import{j as r}from"./iframe-Dl7DKvET.js";import{B as e}from"./Button-BBfvcWdO.js";const o=t=>r.jsx(e,{...t});try{o.displayName="Button",o.__docgenInfo={description:"",displayName:"Button",props:{}}}catch{}export{o as B};
