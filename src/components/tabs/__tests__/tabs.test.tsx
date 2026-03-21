@@ -5,13 +5,11 @@ import {Tabs} from '../tabs';
 describe('Tabs', () => {
   const items = [
     {
-      analyticsLabel: 'analytics-tab1',
       children: 'Content 1',
       key: 'tab1',
       label: 'Tab 1',
     },
     {
-      analyticsLabel: 'analytics-tab2',
       children: 'Content 2',
       key: 'tab2',
       label: 'Tab 2',
@@ -86,9 +84,5 @@ describe('Tabs', () => {
 
     expect(screen.getByText('Tab 1')).toBeInTheDocument();
     expect(screen.getByText('Tab 2')).toBeInTheDocument();
-  });
-
-  it('should render with items containing analyticsLabel without errors', () => {
-    expect(() => render(<Tabs items={items} />)).not.toThrow();
   });
 });

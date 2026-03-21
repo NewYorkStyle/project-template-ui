@@ -1,6 +1,6 @@
 import {Input as AntdInput, type InputProps} from 'antd';
 
-type TProps = InputProps;
+export type TInputProps = InputProps;
 
 const {
   OTP: AntdOTP,
@@ -9,7 +9,7 @@ const {
   TextArea: AntdTextArea,
 } = AntdInput;
 
-export const Input = (props: TProps) => {
+export const Input = (props: TInputProps) => {
   return <AntdInput {...props} />;
 };
 

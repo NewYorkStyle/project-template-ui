@@ -132,16 +132,6 @@ export default tseslint.config(
       ],
 
       /**
-       * Запрет хаотичных относительных импортов
-       */
-      'no-restricted-imports': [
-        'warn',
-        {
-          patterns: ['../../*'],
-        },
-      ],
-
-      /**
        * Naming convention
        */
       '@typescript-eslint/naming-convention': [

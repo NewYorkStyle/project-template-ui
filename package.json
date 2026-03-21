@@ -21,9 +21,16 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,md,yml,yaml,css,scss}": [
+    "*.{json,md,yml,yaml}": [
       "prettier --write"
     ]
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -54,10 +61,13 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "11.0.6",
     "@semantic-release/npm": "12.0.2",
-    "@storybook/addon-a11y": "10.2.12",
-    "@storybook/addon-docs": "10.2.12",
+    "@storybook/addon-a11y": "10.3.1",
+    "@storybook/addon-docs": "10.3.1",
     "@storybook/addon-webpack5-compiler-swc": "4.0.2",
-    "@storybook/react-webpack5": "10.2.12",
+    "@storybook/react-vite": "10.3.1",
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/webpack": "8.1.0",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
     "@testing-library/user-event": "14.6.1",
@@ -69,13 +79,14 @@
     "antd": "6",
     "conventional-changelog-conventionalcommits": "9.1.0",
     "css-loader": "6.8.1",
+    "esbuild-plugin-svgr": "3.1.1",
     "eslint": "9.39.3",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-sort-destructure-keys": "3.0.0",
-    "eslint-plugin-storybook": "10.2.12",
+    "eslint-plugin-storybook": "10.3.1",
     "globals": "17.3.0",
     "husky": "8.0.3",
     "jest": "30.2.0",
@@ -83,18 +94,17 @@
     "lint-staged": "15.2.10",
     "prettier": "3.6.2",
     "react": "19.2.4",
+    "react-docgen-typescript": "2.4.0",
     "react-dom": "19.2.4",
-    "sass": "1.80.5",
-    "sass-loader": "16.0.3",
     "semantic-release": "24.2.9",
-    "storybook": "10.2.12",
-    "style-loader": "3.3.3",
-    "style-resources-loader": "1.5.0",
+    "storybook": "10.3.1",
     "ts-jest": "29.4.6",
     "ts-loader": "9.5.4",
     "ts-node": "10.9.2",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.56.1"
+    "typescript-eslint": "8.56.1",
+    "vite": "7.3.1",
+    "vite-plugin-svgr": "4.5.0"
   }
 }
