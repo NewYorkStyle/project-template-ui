@@ -4,84 +4,27 @@ import React from 'react';
 
 import {render, screen, fireEvent} from '@testing-library/react';
 import {Button} from 'antd';
+import {vi} from 'vitest';
 
 import {Drawer} from '../drawer';
 
-// Правильный mock для Antd Drawer без передачи лишних пропсов в DOM
-jest.mock('antd', (): any => {
-  const actual = jest.requireActual('antd');
-
-  const MockDrawer = ({
-    children,
-    className,
-    closable = true,
-    extra,
-    keyboard,
-    maskClosable,
-    onClose,
-    // Извлекаем пропсы которые не должны попадать в DOM
-    open,
-    placement,
-    size,
-    title,
-    width,
-    ...restProps
-  }: any) => {
-    if (!open) return null;
-
-    return (
-      <div
-        data-testid='antd-drawer'
-        className={className}
-        // Передаем только безопасные пропсы
-        {...restProps}
-      >
-        {/* Заголовок с extra */}
-        {title && (
-          <div data-testid='drawer-header'>
-            <div data-testid='drawer-title'>{title}</div>
-            {extra && <div data-testid='drawer-extra'>{extra}</div>}
-          </div>
-        )}
-
-        <div data-testid='drawer-content'>{children}</div>
-
-        {/* Скрытый элемент с информацией о пропсах для тестов */}
-        <div
-          data-testid='drawer-props'
-          style={{display: 'none'}}
-          data-placement={placement}
-          data-width={width}
-          data-size={size}
-          data-closable={closable}
-          data-mask-closable={maskClosable}
-          data-keyboard={keyboard}
-        />
-
-        {closable && (
-          <button onClick={onClose} data-testid='drawer-close-button'>
-            Close
-          </button>
-        )}
-      </div>
-    );
-  };
-
-  return {
-    ...actual,
-    Drawer: jest.fn(MockDrawer),
-  };
+vi.mock('antd', async () => {
+  const {createAntdWithDrawerMock} = await import(
+    '../../../test/create-antd-drawer-mock'
+  );
+  const actual = await vi.importActual<typeof import('antd')>('antd');
+  return createAntdWithDrawerMock(actual, vi.fn);
 });
 
 describe('Drawer Component', () => {
   const defaultProps = {
-    onClose: jest.fn(),
+    onClose: vi.fn(),
     open: true,
     title: 'Test Drawer',
   };
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('рендерится с переданными пропсами', () => {
@@ -128,7 +71,7 @@ describe('Drawer Component', () => {
   });
 
   it('вызывает onClose при закрытии', () => {
-    const onCloseMock = jest.fn();
+    const onCloseMock = vi.fn();
 
     render(
       <Drawer {...defaultProps} onClose={onCloseMock} closable={true}>

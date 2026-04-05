@@ -1,4 +1,5 @@
 import {act, render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Statistic} from '../statistic';
 
@@ -88,12 +89,12 @@ describe('Statistic Component', () => {
 
   describe('Statistic.Timer', () => {
     beforeEach(() => {
-      jest.useFakeTimers();
+      vi.useFakeTimers();
     });
 
     afterEach(() => {
-      jest.clearAllTimers();
-      jest.useRealTimers();
+      vi.clearAllTimers();
+      vi.useRealTimers();
     });
 
     it('should render timer with countdown', () => {
@@ -114,7 +115,7 @@ describe('Statistic Component', () => {
     });
 
     it('should call onFinish when countdown completes', () => {
-      const onFinishMock = jest.fn();
+      const onFinishMock = vi.fn();
       const pastTime = Date.now() - 1000; // 1 second in past
 
       render(
@@ -128,7 +129,7 @@ describe('Statistic Component', () => {
 
       // Даем время для выполнения колбэка
       act(() => {
-        jest.advanceTimersByTime(100);
+        vi.advanceTimersByTime(100);
       });
 
       // onFinish должен быть вызван для прошедшего времени
@@ -152,7 +153,7 @@ describe('Statistic Component', () => {
 
       // Перемещаем время на 1 секунду вперед с использованием act
       act(() => {
-        jest.advanceTimersByTime(1000);
+        vi.advanceTimersByTime(1000);
       });
 
       // Должен отображать 2 секунды
@@ -177,7 +178,7 @@ describe('Statistic Component', () => {
 
       // Таймер должен быть очищен и не вызывать ошибок
       expect(() => {
-        jest.advanceTimersByTime(5000);
+        vi.advanceTimersByTime(5000);
       }).not.toThrow();
     });
   });

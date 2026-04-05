@@ -1,4 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Tabs} from '../tabs';
 
@@ -36,7 +37,7 @@ describe('Tabs', () => {
   });
 
   it('should handle tab changes', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(<Tabs items={items} onChange={handleChange} />);
 

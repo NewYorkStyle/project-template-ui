@@ -4,13 +4,14 @@
 - Конфиг лежит в файле `.releaserc.json` и:
   - анализирует типы коммитов (`feat`, `fix`, `docs`, `chore`, и т.д.);
   - генерирует заметки о релизе и обновляет `docs/CHANGELOG.md`;
-  - обновляет версию в `package.json` / `package-lock.json`;
+  - обновляет версию в `package.json` (`@semantic-release/npm`);
+  - в релизный коммит (`@semantic-release/git`) попадают `package.json`, `pnpm-lock.yaml` и `docs/CHANGELOG.md`;
   - публикует пакет в GitHub Packages с учётом `publishConfig.registry`.
 
 ### Скрипты
 
-- `npm run semantic-release` — полноценный релиз (используется в CI).
-- `npm run semantic-release:dry-run` — прогон без записи изменений (для локальной проверки).
+- `pnpm run semantic-release` — полноценный релиз (используется в CI).
+- `pnpm run semantic-release:dry-run` — прогон без записи изменений (для локальной проверки).
 
 ### Переменные окружения для CI
 

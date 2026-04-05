@@ -3,7 +3,7 @@
   "include": [
     "src/**/*",
     ".storybook/**/*",
-    "jest.setup.ts",
+    "vitest.setup.ts",
     "**/*.test.*",
     "**/*.spec.*"
   ]

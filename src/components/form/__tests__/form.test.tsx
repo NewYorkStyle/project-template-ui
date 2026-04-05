@@ -1,4 +1,5 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Button} from '../../button';
 import {Input} from '../../input';
@@ -29,8 +30,8 @@ describe('Form', () => {
   });
 
   it('should show validation errors for required fields', async () => {
-    const onFinish = jest.fn();
-    const onFinishFailed = jest.fn();
+    const onFinish = vi.fn();
+    const onFinishFailed = vi.fn();
 
     render(
       <Form onFinish={onFinish} onFinishFailed={onFinishFailed}>
@@ -126,7 +127,7 @@ describe('Form', () => {
   });
 
   it('should submit form with valid data', async () => {
-    const onFinish = jest.fn();
+    const onFinish = vi.fn();
 
     render(
       <Form onFinish={onFinish}>
