@@ -4,20 +4,24 @@ React UI kit на базе `antd` с экспортируемыми обертк
 
 ## Быстрый старт
 
+Менеджер пакетов — **pnpm** (версия задаётся полем `packageManager` в `package.json`; при необходимости: `corepack enable`).
+
 ```bash
-npm install
-npm run build
-npm test
-npm run storybook
+pnpm install
+pnpm run build
+pnpm test
+pnpm run storybook
 ```
 
 ### Доступные команды
 
-- `npm run build` - сборка библиотеки (tsup)
-- `npm run test` - запуск Jest
-- `npm run storybook` - Storybook dev сервер (порт `6006`)
-- `npm run build-storybook` - сборка Storybook
-- `npm run prettier:format` / `npm run prettier:check` - форматирование/проверка
+- `pnpm run build` — сборка библиотеки (tsup)
+- `pnpm test` / `pnpm run test` — один прогон unit-тестов (Vitest, `vitest run`)
+- `pnpm run test:coverage` — те же тесты с отчётом покрытия (V8)
+- `pnpm exec vitest` — интерактивный watch-режим Vitest
+- `pnpm run storybook` — Storybook dev сервер (порт `6006`)
+- `pnpm run build-storybook` — сборка Storybook
+- `pnpm run prettier:format` / `pnpm run prettier:check` — форматирование/проверка
 
 ## Структура
 

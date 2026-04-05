@@ -2,6 +2,7 @@ import React from 'react';
 
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import {vi} from 'vitest';
 
 import {Input} from '../input';
 
@@ -14,7 +15,7 @@ describe('Input', () => {
 
   it('should call onChange when user types', async () => {
     const user = userEvent.setup();
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(<Input placeholder='Type' onChange={handleChange} />);
 

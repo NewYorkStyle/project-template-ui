@@ -1,4 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Segmented} from '../segmented';
 
@@ -18,7 +19,7 @@ describe('Segmented', () => {
   });
 
   it('should handle value changes', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     const options = [
       {label: 'Option 1', value: 'option1'},
       {label: 'Option 2', value: 'option2'},

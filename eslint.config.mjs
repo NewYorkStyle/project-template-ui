@@ -45,7 +45,7 @@ export default tseslint.config(
         ...globals.browser,
         ...globals.node,
         ...globals.es2021,
-        ...globals.jest,
+        ...globals.vitest,
         React: 'readonly',
       },
     },
@@ -178,12 +178,19 @@ export default tseslint.config(
     },
   },
   {
-    files: ['jest.setup.ts', '**/*.test.*', '**/*.spec.*'],
+    files: [
+      'vitest.setup.ts',
+      'src/test/**/*',
+      '**/*.test.*',
+      '**/*.spec.*',
+    ],
     rules: {
+      '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
     },
   },
 

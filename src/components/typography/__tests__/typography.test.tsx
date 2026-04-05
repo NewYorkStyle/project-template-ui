@@ -1,4 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Typography} from '../typography';
 
@@ -11,7 +12,7 @@ describe('Typography', () => {
     });
 
     it('should handle click events', () => {
-      const handleClick = jest.fn();
+      const handleClick = vi.fn();
 
       render(
         <Typography.Text onClick={handleClick}>Clickable text</Typography.Text>
@@ -70,7 +71,7 @@ describe('Typography', () => {
     });
 
     it('should handle click events', () => {
-      const handleClick = jest.fn();
+      const handleClick = vi.fn();
 
       render(
         <Typography.Paragraph onClick={handleClick}>
@@ -103,7 +104,7 @@ describe('Typography', () => {
     });
 
     it('should handle click events', () => {
-      const handleClick = jest.fn();
+      const handleClick = vi.fn();
 
       render(
         <Typography.Title onClick={handleClick}>
@@ -144,7 +145,7 @@ describe('Typography', () => {
     });
 
     it('should handle click events', () => {
-      const handleClick = jest.fn();
+      const handleClick = vi.fn();
 
       render(
         <Typography.Link onClick={handleClick}>Clickable link</Typography.Link>

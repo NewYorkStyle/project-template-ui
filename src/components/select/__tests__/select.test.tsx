@@ -1,4 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {Select} from '../select';
 
@@ -23,7 +24,7 @@ describe('Select', () => {
   });
 
   it('should handle value changes', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(<Select options={options} onChange={handleChange} />);
 
@@ -80,7 +81,7 @@ describe('Select', () => {
   });
 
   it('should handle focus events', () => {
-    const handleFocus = jest.fn();
+    const handleFocus = vi.fn();
 
     render(<Select options={options} onFocus={handleFocus} />);
 
