@@ -27,6 +27,11 @@ export const getAntdThemeConfig = (
       Typography: {
         fontSize: layoutTokens.textSize.md,
         fontSizeHeading1: layoutTokens.textSize.xl,
+        colorText: palette.textPrimary,
+        colorTextSecondary: palette.textSecondary,
+        colorTextDisabled: palette.textDisabled,
+        colorTextHeading: palette.textPrimary,
+        colorTextDescription: palette.textSecondary,
       },
     },
     token: {
