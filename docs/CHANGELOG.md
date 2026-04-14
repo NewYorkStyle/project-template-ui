@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/NewYorkStyle/project-template-ui/compare/v1.2.2...v1.3.0) (2026-04-14)
+
+### Features
+
+* PROJECTTEMPLATE-72 Добавление иконки, актуализация токенов, фикс локализации ([#9](https://github.com/NewYorkStyle/project-template-ui/issues/9)) ([34fb2e3](https://github.com/NewYorkStyle/project-template-ui/commit/34fb2e351ade44ade02df47cabcf7259d87e4b64))
+
 ## [1.2.2](https://github.com/NewYorkStyle/project-template-ui/compare/v1.2.1...v1.2.2) (2026-04-05)
 
 ## [1.2.1](https://github.com/NewYorkStyle/project-template-ui/compare/v1.2.0...v1.2.1) (2026-03-21)
